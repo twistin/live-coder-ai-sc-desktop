@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de IA para Live Coding SC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Estilos globales para asegurar que la app ocupe toda la ventana */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #root {
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Estilos personalizados para la barra de desplazamiento (scrollable-content) */
+        .scrollable-content {
+            max-height: 60vh;
+            /* Ajusta según sea necesario */
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #4a5568 #2d3748;
+        }
+
+        .scrollable-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollable-content::-webkit-scrollbar-track {
+            background: #2d3748;
+            border-radius: 10px;
+        }
+
+        .scrollable-content::-webkit-scrollbar-thumb {
+            background-color: #4a5568;
+            border-radius: 10px;
+            border: 2px solid #2d3748;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="./bundle.js"></script>
+</body>
+
+</html>

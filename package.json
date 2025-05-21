@@ -1,0 +1,55 @@
+{
+  "name": "live-coder-ai-sc-desktop",
+  "version": "1.0.0",
+  "description": "AI Assistant for Live Coding in SuperCollider using Electron and React",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-react": "webpack --mode production",
+    "build": "npm run build-react && electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "Electron",
+    "React",
+    "SuperCollider",
+    "OSC",
+    "AI",
+    "Live Coding"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^30.0.9",
+    "node-osc": "^7.0.0",
+    "dotenv": "^16.4.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "firebase": "^10.12.3"  
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "@electron/remote": "^2.1.2",
+    "babel-loader": "^9.1.3",
+    "electron-builder": "^24.13.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "style-loader": "^4.0.0",
+    "css-loader": "^7.1.2"
+  },
+  "build": {
+    "appId": "com.yourcompany.livecoderai",
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json",
+      "public",
+      "src"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    }
+  }
+}
